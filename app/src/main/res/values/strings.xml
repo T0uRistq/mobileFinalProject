@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dotapicker</string>
+    <string name="filter_heroes">Filter heroes</string>
+    <string name="dire">Dire</string>
+    <string name="radiant">Radiant</string>
+    <string name="suggest_hero">Suggest Hero</string>
+</resources>

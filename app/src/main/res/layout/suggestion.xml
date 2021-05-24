@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/greyfade"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@color/black"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/pudge"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose side"
+        android:id="@+id/suggestion1"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="serif"
+        android:textAllCaps="true"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show"
+        android:onClick="showHeroes"
+        android:id="@+id/button"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="256dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DIRE"
+            android:onClick="god"
+            android:id="@+id/buttonr"
+            android:layout_weight="1"
+            android:layout_margin="32dp"
+            android:backgroundTint="#330000"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RADIANT"
+            android:onClick="gor"
+            android:id="@+id/buttond"
+            android:layout_weight="1"
+            android:layout_margin="32dp"
+            android:backgroundTint="#003300"/>
+
+    </LinearLayout>
+
+</LinearLayout>

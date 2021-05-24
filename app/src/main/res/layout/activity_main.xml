@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/greyfade">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dire"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="serif"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:shadowColor="#FF0000"
+            android:shadowDx="-2"
+            android:shadowDy="2"
+            android:shadowRadius="0.01"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radiant"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="serif"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:shadowColor="#00FF00"
+            android:shadowDx="-2"
+            android:shadowDy="2"
+            android:shadowRadius="0.01"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="26dp"
+            android:id="@+id/dire_hero1"
+            android:background="@color/black"
+            android:layout_marginRight="2dp"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="26dp"
+            android:id="@+id/dire_hero2"
+            android:background="@color/black"
+            android:layout_marginRight="2dp"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="26dp"
+            android:id="@+id/dire_hero3"
+            android:background="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="26dp"
+            android:id="@+id/radiant_hero1"
+            android:background="@color/black"
+            android:layout_marginRight="2dp"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="26dp"
+            android:id="@+id/radiant_hero2"
+            android:background="@color/black"
+            android:layout_marginRight="2dp"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="26dp"
+            android:id="@+id/radiant_hero3"
+            android:background="@color/black"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="26dp"
+            android:id="@+id/dire_hero4"
+            android:background="@color/black"
+            android:layout_marginRight="2dp"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="26dp"
+            android:id="@+id/dire_hero5"
+            android:background="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="26dp"
+            android:id="@+id/radiant_hero4"
+            android:background="@color/black"
+            android:layout_marginRight="2dp"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="26dp"
+            android:id="@+id/radiant_hero5"
+            android:background="@color/black"/> 
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/sv1"
+            android:background="#7A7A7A"/>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"/>
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?selectableItemBackground"
+                android:shadowColor="@color/black"
+                android:shadowDx="-2"
+                android:shadowDy="2"
+                android:shadowRadius="0.1"
+                android:text="@string/suggest_hero"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:onClick="suggestHero"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv1"/>
+
+</LinearLayout>
