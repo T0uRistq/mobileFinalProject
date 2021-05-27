@@ -10,14 +10,56 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@color/black"
-        android:layout_marginBottom="8dp"
-        android:id="@+id/pudge"/>
+        android:layout_marginBottom="4dp"
+        android:id="@+id/pudge1"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose side"
+        android:text="Choose your side"
         android:id="@+id/suggestion1"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="serif"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@color/black"
+        android:layout_marginBottom="4dp"
+        android:id="@+id/pudge2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= ""
+        android:id="@+id/suggestion2"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="serif"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@color/black"
+        android:layout_marginBottom="4dp"
+        android:id="@+id/pudge3"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/suggestion3"
         android:textSize="24sp"
         android:gravity="center"
         android:layout_gravity="center"
@@ -27,8 +69,8 @@
         android:textStyle="bold"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="128dp"
+        android:layout_height="85dp"
         android:text="Show"
         android:onClick="showHeroes"
         android:id="@+id/button"
@@ -38,25 +80,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_marginTop="256dp">
+        android:layout_marginTop="256dp"
+        android:id="@+id/ll">
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
             android:text="DIRE"
             android:onClick="god"
             android:id="@+id/buttonr"
             android:layout_weight="1"
-            android:layout_margin="32dp"
+            android:layout_margin="24dp"
             android:backgroundTint="#330000"/>
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
             android:text="RADIANT"
             android:onClick="gor"
             android:id="@+id/buttond"
             android:layout_weight="1"
-            android:layout_margin="32dp"
+            android:layout_margin="24dp"
             android:backgroundTint="#003300"/>
 
     </LinearLayout>

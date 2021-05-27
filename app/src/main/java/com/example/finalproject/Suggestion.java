@@ -5,6 +5,7 @@ import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,9 +28,10 @@ import java.util.ArrayList;
 import java.util.TreeSet;
 
 public class Suggestion extends AppCompatActivity {
-    TextView tv;
+    TextView tv1 ,tv2, tv3;
     Button button, buttonr, buttond;
-    ImageView imageView;
+    ImageView iv1, iv2, iv3;
+    LinearLayout ll;
     ArrayList <ArrayList <Hero>> heroes = new ArrayList <ArrayList <Hero>>();
     int cntr, cntd;
     int cur = 0;
@@ -47,9 +49,14 @@ public class Suggestion extends AppCompatActivity {
         rId = (int[]) args.get("radiant");
         cntd = args.getInt("dsize");
         cntr = args.getInt("rsize");
-        tv = findViewById(R.id.suggestion1);
+        tv1 = findViewById(R.id.suggestion1);
+        tv2 = findViewById(R.id.suggestion2);
+        tv3 = findViewById(R.id.suggestion3);
         button = findViewById(R.id.button);
-        imageView = findViewById(R.id.pudge);
+        iv1 = findViewById(R.id.pudge1);
+        iv2 = findViewById(R.id.pudge2);
+        iv3 = findViewById(R.id.pudge3);
+        ll = findViewById(R.id.ll);
         buttonr = findViewById(R.id.buttonr);
         buttond = findViewById(R.id.buttond);
         hs = new HeroStats(Suggestion.this);
@@ -85,6 +92,12 @@ public class Suggestion extends AppCompatActivity {
                     break;
                 }
             }
+            for (int id : dId){
+                if (id == curId) {
+                    flag = true;
+                    break;
+                }
+            }
             if (flag || curId == 135 || curId == 123){
                 continue;
             }
@@ -99,38 +112,46 @@ public class Suggestion extends AppCompatActivity {
             }
             if (total < minf) {
                 minf = total;
-                choicef = i;
-                choices = choicef;
                 choicet = choices;
+                choices = choicef;
+                choicef = i;
             } else
             if (total < mins) {
                 mins = total;
-                choices = i;
                 choicet = choices;
+                choices = i;
             } else
             if (total < mint) {
                 mint = total;
                 choicet = i;
             }
         }
-        imageView.setImageResource(MainActivity.imageRes[choicef]);
-        tv.setText(String.valueOf(MainActivity.s1[choicef]));
+        iv1.setImageResource(MainActivity.imageRes[choicef]);
+        tv1.setText(String.valueOf(MainActivity.s1[choicef]));
+//        tv1.setText(String.valueOf(cur));
+        iv2.setImageResource(MainActivity.imageRes[choices]);
+        tv2.setText(String.valueOf(MainActivity.s1[choices]));
+//        tv2.setText(String.valueOf(cntr));
+        iv3.setImageResource(MainActivity.imageRes[choicet]);
+        tv3.setText(String.valueOf(MainActivity.s1[choicet]));
     }
 
     public void showHeroes(View view) {
-        goThrough();
         calculate();
+        button.setVisibility(View.GONE);
     }
 
     public void god(View view) {
-        tv.setText("");
+        tv1.setText("");
+        ll.setVisibility(View.GONE);
         buttond.setVisibility(View.GONE);
         buttonr.setVisibility(View.GONE);
         goThrough();
     }
 
     public void gor(View view) {
-        tv.setText("");
+        tv1.setText("");
+        ll.setVisibility(View.GONE);
         buttond.setVisibility(View.GONE);
         buttonr.setVisibility(View.GONE);
         int tmp[] = rId;
